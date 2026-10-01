@@ -50,7 +50,6 @@ const MEDIDA = `(()=>{
   const visivel=el=>!!el&&el.getBoundingClientRect().height>0&&getComputedStyle(el).display!=='none';
   const imgs=[...document.querySelectorAll('img')];
   const marcaveis=[...document.querySelectorAll('input[type=radio],input[type=checkbox]')];
-  const numeros=[...document.querySelectorAll('.numeros-card strong')].map(e=>getComputedStyle(e).fontVariantNumeric);
   const barra=document.querySelector('.mobile-sticky');
   const h1=document.querySelector('h1');
   /* Contraste da cor aplicada, nao do token: uma regra mais especifica pode trocar
@@ -86,7 +85,6 @@ const MEDIDA = `(()=>{
     imgSemAlt:imgs.filter(i=>!i.hasAttribute('alt')).map(i=>i.getAttribute('src')),
     imgSemDim:imgs.filter(i=>!i.getAttribute('width')||!i.getAttribute('height')).map(i=>i.getAttribute('src')),
     marcaveisApagados:marcaveis.filter(i=>{const cs=getComputedStyle(i);const r=i.getBoundingClientRect();return cs.appearance==='none'||r.width<12||r.height<12}).map(i=>i.name),
-    numerosAntigos:numeros.filter(v=>!/lining-nums/.test(v)).length,
     h1:h1?h1.textContent.trim():'',
     barraAltura:visivel(barra)?Math.round(barra.getBoundingClientRect().height):0,
     corpoFolga:parseFloat(getComputedStyle(document.body).paddingBottom),
@@ -133,7 +131,6 @@ for (const [i, largura] of LARGURAS.entries()) {
     if (m.barraAltura && m.corpoFolga < m.barraAltura) p.push(`barra fixa (${m.barraAltura}px) cobre o fim da página (folga ${m.corpoFolga}px)`)
     if (m.baixos.length) p.push(`contraste abaixo do mínimo na cor aplicada: ${m.baixos.slice(0, 3).join(' | ')}`)
     if (m.h1 !== titulo) p.push(`h1 esperado "${titulo}", veio "${m.h1}"`)
-    if (m.numerosAntigos) p.push(`${m.numerosAntigos} número(s) da faixa sem algarismo alinhado`)
     if (m.cortados.length) p.push(`texto cortado: ${m.cortados.slice(0, 3).join(' | ')}`)
     if (externos.length) p.push(`requisição para fora do site: ${[...new Set(externos)].slice(0, 2).join(', ')}`)
     if (m.proibidos.length) p.push(`vocabulário proibido no texto: ${m.proibidos.join(', ')}`)

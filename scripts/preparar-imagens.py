@@ -106,7 +106,6 @@ FOTOS = [
     # fundos
     ("brasa-chama", "brasa-chama-pexels-009.jpg", "textura-chama.webp", (0, 70, 867, 1300), 740),
     ("brasa-carvao", "brasa-carvao-pexels-005.jpg", "textura-carvao.webp", (360, 0, 1497, 1251), 1000),
-    ("brasa-carvao", "brasa-carvao-pexels-001.jpg", "fogo-hero.webp", None, 1600),
     ("brasa-carvao", "brasa-carvao-pexels-003.jpg", "brasa-larga.webp", None, 1400),
     # aba Churrasco e passo 03
     ("brasa-chama", "brasa-chama-pexels-013.jpg", "churrasco-chama.webp", None, 740),

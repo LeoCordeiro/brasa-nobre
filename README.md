@@ -42,7 +42,7 @@ npm run testar     # build + testes automatizados
 | Título, texto e foto do topo de cada página | `paginas` em `src/config/site.js` |
 | Cores, raios, sombras, fontes e tempos de animação | `src/config/tokens.js` |
 | Fotos e qual foto vai em cada lugar | `src/config/imagens.js` (arquivos em `src/assets/img/`) |
-| Vídeo no fundo da página inicial | arquivo em `public/video/` e o caminho em `videoHero` (`src/config/imagens.js`) |
+| Vídeo no fundo da página inicial | `python scripts/preparar-video.py original.mp4` gera o loop e o pôster; caminho em `videoHero` (`src/config/imagens.js`) |
 | Seções | `src/components/` (uma por arquivo) |
 | Páginas | `src/views/` e as rotas em `src/router/index.js` |
 | Políticas | `src/views/legal/` |
@@ -81,7 +81,7 @@ em Chrome sem interface:
 
 ## Fotos
 
-Fotos de banco do Pexels (licença de uso livre, inclusive comercial), com autor
-e endereço de cada uma em `docs/creditos-imagens.json`. Para trocar uma foto,
+Fotos e vídeo de banco do Pexels (licença de uso livre, inclusive comercial),
+com autor e endereço em `docs/creditos-imagens.json` e `docs/creditos-video.json`. Para trocar uma foto,
 salve a nova em `src/assets/img/` e aponte o `import` em
 `src/config/imagens.js` (com as dimensões em `dimensoes`).

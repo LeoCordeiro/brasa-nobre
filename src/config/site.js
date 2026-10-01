@@ -58,20 +58,12 @@ export const topbar = {
 }
 
 export const hero = {
-  selo: 'Churrasco para eventos corporativos',
   titulo: empresa.fantasia,
   texto:
     'Sabor em boas companhias. Churrasco de qualidade premium para confraternizações, happy hours, fim de ano, ' +
     'treinamentos e recepção de clientes, com parceiros de confiança para completar o evento.',
 }
 
-/** Só números que a empresa consegue provar: nada de histórico, volume ou "clientes atendidos". */
-export const numeros = [
-  { valor: 100, sufixo: '%', rotulo: 'churrasco próprio' },
-  { valor: 1, rotulo: 'contratação única' },
-  { valor: 3, rotulo: 'frentes de serviço' },
-  { valor: 5, rotulo: 'formatos de evento' },
-]
 
 /** Abas de serviços. `fotos` são chaves de config/imagens.js, na ordem principal · lado · base. */
 export const servicos = {

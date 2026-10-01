@@ -42,7 +42,7 @@ const semProprio = (proprio ? index.replaceAll(proprio, '') : index).replace(/<s
 ok(!/https?:\/\/(?!schema\.org)/.test(semProprio), 'index sem recurso de domínio de terceiro')
 
 console.log('\n  PÚBLICOS\n')
-for (const f of ['favicon.ico', 'favicon-16.png', 'favicon-32.png', 'apple-touch-icon.png', 'icone-192.png', 'icone-512.png', 'site.webmanifest', 'og.jpg', 'robots.txt']) {
+for (const f of ['favicon.ico', 'favicon-16.png', 'favicon-32.png', 'apple-touch-icon.png', 'icone-192.png', 'icone-512.png', 'site.webmanifest', 'og.jpg', 'robots.txt', 'video/brasa.mp4']) {
   ok(existsSync(path.join(DIST, f)), `${f}`)
 }
 

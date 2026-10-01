@@ -15,7 +15,6 @@ import { videoHero } from '@/config/imagens'
 
     <div class="container hero-conteudo">
       <div class="hero-copy">
-        <p class="hero-selo"><span class="ponto" aria-hidden="true"></span>{{ hero.selo }}</p>
         <h1 id="hero-titulo">{{ hero.titulo }}</h1>
         <p class="hero-texto">{{ hero.texto }}</p>
         <div class="acoes">
@@ -64,7 +63,7 @@ import { videoHero } from '@/config/imagens'
   /* O primeiro degradê dá contraste ao cabeçalho transparente sobre o vídeo. */
   background:
     linear-gradient(180deg, rgb(var(--c-fundo-rgb) / 0.62), rgb(var(--c-fundo-rgb) / 0.45) 110px, rgb(var(--c-fundo-rgb) / 0) 240px),
-    linear-gradient(90deg, rgb(var(--c-fundo-rgb) / 0.94), rgb(var(--c-fundo-rgb) / 0.55) 48%, rgb(var(--c-fundo-rgb) / 0.25)),
+    linear-gradient(90deg, rgb(var(--c-fundo-rgb) / 0.94), rgb(var(--c-fundo-rgb) / 0.62) 48%, rgb(var(--c-fundo-rgb) / 0.25)),
     linear-gradient(0deg, var(--c-fundo), rgb(var(--c-fundo-rgb) / 0) 28%);
   pointer-events: none;
 }
@@ -91,9 +90,7 @@ import { videoHero } from '@/config/imagens'
   display: flex;
   min-height: 900px;
   align-items: center;
-  /* 150 embaixo: o cartão de números sobe 72px por cima do hero e precisa de
-     respiro até a última linha do texto. */
-  padding: 163px 0 150px;
+  padding: 163px 0 96px;
 }
 
 .hero-copy {
@@ -101,30 +98,6 @@ import { videoHero } from '@/config/imagens'
   animation: chegada var(--t-hero) 130ms both var(--t-suave);
 }
 
-.hero-selo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 24px;
-  padding: 9px 16px;
-  border: 1px solid var(--l-sobre-escuro-forte);
-  border-radius: var(--r-selo);
-  background: rgb(var(--c-fundo-rgb) / 0.45);
-  color: var(--c-ouro);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  backdrop-filter: blur(10px);
-}
-.ponto {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--c-ouro);
-  box-shadow: 0 0 0 0 rgb(var(--c-ouro-rgb) / 0.6);
-  animation: brasa 2.4s ease-out infinite;
-}
 
 h1 {
   max-width: 760px;
@@ -152,22 +125,13 @@ h1 {
     transform: none;
   }
 }
-@keyframes brasa {
-  70% {
-    box-shadow: 0 0 0 10px rgb(var(--c-ouro-rgb) / 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgb(var(--c-ouro-rgb) / 0);
-  }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     display: none;
   }
   .hero-copy,
-  .acoes .btn,
-  .ponto {
+  .acoes .btn {
     animation: none;
   }
 }
@@ -193,10 +157,6 @@ h1 {
   }
   .hero-conteudo {
     padding: calc(84px + clamp(40px, 8vh, 80px)) 0 72px;
-  }
-  .hero-selo {
-    margin-bottom: 16px;
-    font-size: 10px;
   }
   h1 {
     max-width: 330px;

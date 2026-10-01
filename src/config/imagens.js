@@ -2,7 +2,7 @@
  * Imagens do site, importadas uma vez só (o Vite põe hash no nome de cada uma
  * no build). Fotos de banco com crédito em docs/creditos-imagens.json.
  */
-import fogo from '@/assets/img/fogo-hero.webp'
+import fogo from '@/assets/img/hero-brasa.webp'
 import brasaLarga from '@/assets/img/brasa-larga.webp'
 import carvao from '@/assets/img/textura-carvao.webp'
 import chama from '@/assets/img/textura-chama.webp'
@@ -55,7 +55,7 @@ export const fotos = {
 
 /** Dimensões reais, para width/height no <img> (sem pulo de layout ao carregar). */
 export const dimensoes = {
-  fogo: [1600, 1066],
+  fogo: [1600, 900],
   brasaLarga: [1400, 935],
   carvao: [1000, 1100],
   chama: [740, 1050],
@@ -85,4 +85,4 @@ export const marca = { logo, logo720, palavra }
  * Fundo do hero. Para usar vídeo, coloque o arquivo em public/video/ e informe
  * o caminho em `mp4` (o pôster continua sendo a primeira imagem).
  */
-export const videoHero = { mp4: '', poster: fogo }
+export const videoHero = { mp4: '/video/brasa.mp4', poster: fogo }
