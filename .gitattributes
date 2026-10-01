@@ -1,0 +1,11 @@
+# Normaliza fim de linha no repositório, preserva no disco de cada um
+* text=auto eol=lf
+
+# Binários — nunca converter
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary

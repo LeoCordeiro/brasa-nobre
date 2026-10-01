@@ -1,0 +1,22 @@
+# Dependências e build
+node_modules
+dist
+dist-ssr
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Editor e sistema
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+
+# Capturas de tela geradas por scripts/captura.mjs
+_shots/
